@@ -75,6 +75,7 @@ sup:hover {
   height: 700px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .slide_first {
   width: 100%;
@@ -100,6 +101,50 @@ sup:hover {
   position: absolute;
   right: 0;
 }
+.firstSlideWritting {
+  width: 500px;
+  text-align: center;
+  position: absolute;
+  font-weight: 500;
+  top: 250px;
+  left: 250px;
+}
+.slideWrittingPart2{
+  width: 500px;
+  text-align: center;
+  position: absolute;
+  font-weight: 500;
+  top: 250px;
+  right: 250px;
+}
+.firstSlideIcon {
+  font-size: 35px;
+  color: red;
+}
+.firstSlideTitle {
+  font-size: 50px;
+  padding: 20px 0;
+  
+}
+.firstSlideContent {
+  font-size: 1.05rem;
+  color: gray;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.firstSlideBtn {
+  padding: 15px 50px;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  border: 0.5px solid black;
+}
+.firstSlideBtn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+  border: 0.5px solid black;
+}
 /* Slide end */
 
 /* categories box start */
@@ -114,8 +159,6 @@ sup:hover {
   position: relative;
   display: flex;
   justify-content: center;
-  
-  
 }
 .categoriBoxWordItems {
   bottom: 0;
@@ -131,7 +174,7 @@ sup:hover {
   margin-left: 40px;
   width: 80px;
   margin-bottom: 40px;
-  
+
   padding-bottom: 5px;
   color: rgb(241, 229, 158);
   border-bottom: 2px solid rgb(241, 229, 158);
