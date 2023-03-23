@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Sofia+Sans+Semi+Condensed:ital,wght@1,800;1,900&family=Tilt+Prism&family=Ubuntu:wght@300;400;500;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Sofia+Sans+Semi+Condensed:ital,wght@1,800;1,900&family=Tilt+Prism&family=Ubuntu:wght@300;400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -9,10 +7,10 @@
 }
 body {
   font-size: 16px;
-  font-family: 'Nunito', sans-serif;
-font-family: 'Sofia Sans Semi Condensed', sans-serif;
-font-family: 'Tilt Prism', cursive;
-font-family: 'Ubuntu', sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  font-family: "Tilt Prism", cursive;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* Header start */
@@ -73,15 +71,13 @@ sup:hover {
 
 /* Slide start */
 .container {
-    
   width: 100%;
   height: 700px;
   display: flex;
   align-items: center;
-  
 }
-.slide_first{
-    width: 100%;
+.slide_first {
+  width: 100%;
 }
 .btn {
   width: 50px;
@@ -99,13 +95,49 @@ sup:hover {
 }
 .prew {
   position: absolute;
-  
-} 
+}
 .next {
   position: absolute;
- right: 0;
+  right: 0;
 }
 /* Slide end */
+
+/* categories box start */
+.categoriBoxSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+.categoriBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.categoriBoxWordItems {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+}
+.categoriBoxTitle {
+  color: white;
+  margin-bottom: 20px;
+}
+.categoriBoxContent {
+  display: none;
+  margin-left: 40px;
+  width: 80px;
+  margin-bottom: 40px;
+  
+  padding-bottom: 5px;
+  color: rgb(241, 229, 158);
+  border-bottom: 2px solid rgb(241, 229, 158);
+}
+
+/* categories box end */
 
 /* Responsive start */
 @media only screen and (max-width: 900px) {
@@ -114,7 +146,7 @@ sup:hover {
   .header_menu {
     display: none;
   }
-  .container{
+  .container {
     width: 900px;
   }
 
