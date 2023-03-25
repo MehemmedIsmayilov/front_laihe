@@ -24,35 +24,87 @@
           <li class="header_li">Men</li>
           <li class="header_li">Women</li>
           <li class="header_li">Baby Collection</li>
-          <li class="header_li">Pages</li>
+          <div class="pages_section">
+            <li class="header_li">Pages</li>
+            <div class="pages_items">
+              <li class="pages_item">Login</li>
+              <li class="pages_item">Cart</li>
+              <li class="pages_item">Product Details</li>
+              <li class="pages_item">Product Checkout</li>
+            </div>
+          </div>
           <li class="header_li">Blog</li>
           <li class="header_li">Contact</li>
         </ul>
       </div>
       <div class="header_addToCart">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-user loginButton"> </i>
+
         <i class="fa-solid fa-cart-shopping"><sup>1</sup></i>
       </div>
       <div class="bars_menu">
         <i class="fa-solid fa-bars"></i>
       </div>
+      <div class="search">
+      <input type="text" placeholder="Search Here" class="search_input">
+      </div>
     </header>
+    
+    <div class="modal">
+      <div class="login_box">
+        <p class="login_title">Login</p>
+        <p class="login_content">Enter Login details to get access</p>
+        <label for="user">Username Or Email Address</label>
+        <input type="text" id="user" placeholder="User name /Email address" />
+        <label for="password">Password</label>
+        <input type="text" id="password" placeholder="Enter password" />
+        <div class="checkbox_row">
+          <div class="input_group">
+            <input type="checkbox" id="checkbox" />
 
+            <label for="checkbox">Keep Me Logged In</label>
+          </div>
+          <p class="forget">Forget Password?</p>
+        </div>
+        <div class="login_btnRow">
+          <p class="sing_up">
+            Don’t have an account? <a class="singUp">Sing Up</a> here
+          </p>
+          <button class="login">Login</button>
+        </div>
+      </div>
+    </div>
     <!-- Slide -->
 
     <div class="container">
       <button class="prew btn"><i class="fa-solid fa-chevron-left"></i></button>
       <div class="carusel">
-        <img src="" alt="" class="slide_first" />
+        <img src="./images/h1_hero1.jpg " alt="" class="slide_first" />
         <div class="firstSlideWritting">
           <p class="firstSlideIcon">Fashion Sale</p>
-          <p class="firstSlideTitle">Minimal Menz Style</p>
-          <p class="firstSlideContent">
+          <p class="firstSlideTitle animate__bounceIn">Minimal Menz Style</p>
+          <p class="firstSlideContent animate__bounceIn">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
             aut commodi itaque earum minima quos.
           </p>
-          <button class="firstSlideBtn animate__fadeInUp">SHOP NOW</button>
+          <button class="firstSlideBtn animate__fadeInUp animate__bounceIn">
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+      <div class="carusel2" style="display: none">
+        <img src="./images/h1_hero2.jpg" alt="" class="slide_first2" />
+        <div class="firstSlideWritting2">
+          <p class="firstSlideIcon">Fashion Sale</p>
+          <p class="firstSlideTitle animate__bounceIn">Minimal Menz Style</p>
+          <p class="firstSlideContent animate__bounceIn">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            aut commodi itaque earum minima quos.
+          </p>
+          <button class="firstSlideBtn animate__fadeInUp animate__bounceIn">
+            SHOP NOW
+          </button>
         </div>
       </div>
       <button class="next btn"><i class="fa-solid fa-angle-right"></i></button>
@@ -84,6 +136,32 @@
       </div>
     </div>
 
+    <!-- filter_section -->
+
+    <div class="filter_section">
+      <div class="filter_section1">
+        <div class="filter_about">
+          <p class="filter_section_title">Trending This Week</p>
+          <div class="categori_filter">
+            <p class="filter_btn" data-attribute="Men">Men</p>
+            <p class="filter_btn" data-attribute="Women">Women</p>
+            <p class="filter_btn" data-attribute="Baby">Baby</p>
+            <p class="filter_btn" data-attribute="Fashion">Fashion</p>
+          </div>
+        </div>
+      </div>
+      <div class="filter_section2">
+        <button class="filter_change filter_btn_prew">
+          <i class="fa-solid fa-chevron-left i_hover"></i>
+        </button>
+        <div class="filter_boxes"></div>
+        <button class="filter_change filter_btn_next">
+          <i class="fa-solid fa-angle-right i_hover"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/d24faa90a8.js"
       crossorigin="anonymous"
