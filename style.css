@@ -106,10 +106,31 @@ sup:hover {
 }
 .search_input{
   width: 100%;
-  padding: 20px;
-  background-color: rgb(255, 97, 97);
+  height: 0;
+  background-color: rgb(255, 0, 0);
   color: white;
   border: none;
+}
+.search_block{
+ height: 54px;
+  transition: 0.5s;
+  padding: 20px;
+}
+.searchX{
+  font-size: 1.6rem;
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  color: white;
+  opacity: 0;
+}
+.searchXX{
+  opacity: 100;
+  color: white;
+}
+
+.searchX:hover{
+  color: black;
 }
 /* Header end */
 /* Login page start */
@@ -280,15 +301,7 @@ label {
   transition: 0.5s;
   border: 0.5px solid black;
 }
-/* .crsl1{
-  display: none;
-}
-.carusel2{
-  display: none;
-}
-.crsk2{
- display: block;
-} */
+
 /* Slide end */
 
 /* categories box start */
@@ -409,6 +422,72 @@ label {
 .filter_boxes::-webkit-scrollbar {
   display: none;
 }
+
+
+
+
+/* About slide start */
+.about_slide_section{
+  width: 100%;
+  height: 400px;
+  background-color: rgb(252, 238, 221);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  margin: 50px 0;
+}
+.about_slide{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about_slide_animationPrew{
+  animation-name: prew;
+  animation-duration: 1s;
+  position: relative;
+}
+.about_slide_animationNext{
+  animation-name: next;
+  animation-duration: 1s;
+  position: relative;
+}
+@keyframes prew {
+  0%   { left:0px; top:0px;}
+  100%  {opacity: 0; left:100px; top:0px;}
+
+}
+@keyframes next {
+  0%   { right:0px; top:0px;}
+  100%  {opacity: 0; right:100px; top:0px;}
+  
+}
+.about_slide_logo_section{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+/* about slide end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive start */
 @media only screen and (max-width: 900px) {
