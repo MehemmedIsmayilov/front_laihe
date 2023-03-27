@@ -27,6 +27,7 @@ body {
   position: sticky;
   top: 0px;
   z-index: 1;
+  box-shadow: 0 0 15px gray;
 }
 .header_logo {
   cursor: pointer;
@@ -99,24 +100,24 @@ sup:hover {
 .pages_item {
   padding-bottom: 9px;
 }
-.search{
+.search {
   width: 70%;
   position: absolute;
   bottom: -55px;
 }
-.search_input{
+.search_input {
   width: 100%;
   height: 0;
   background-color: rgb(255, 0, 0);
   color: white;
   border: none;
 }
-.search_block{
- height: 54px;
+.search_block {
+  height: 54px;
   transition: 0.5s;
   padding: 20px;
 }
-.searchX{
+.searchX {
   font-size: 1.6rem;
   position: absolute;
   right: 15px;
@@ -124,12 +125,12 @@ sup:hover {
   color: white;
   opacity: 0;
 }
-.searchXX{
+.searchXX {
   opacity: 100;
   color: white;
 }
 
-.searchX:hover{
+.searchX:hover {
   color: black;
 }
 /* Header end */
@@ -422,11 +423,8 @@ label {
   display: none;
 }
 
-
-
-
 /* About slide start */
-.about_slide_section{
+.about_slide_section {
   width: 100%;
   height: 400px;
   background-color: rgb(252, 238, 221);
@@ -437,33 +435,45 @@ label {
   gap: 50px;
   margin: 50px 0;
 }
-.about_slide{
+.about_slide {
   width: 40%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.about_slide_animationPrew{
+.about_slide_animationPrew {
   animation-name: prew;
   animation-duration: 0.3s;
   position: relative;
 }
-.about_slide_animationNext{
+.about_slide_animationNext {
   animation-name: next;
   animation-duration: 0.3s;
   position: relative;
 }
 @keyframes prew {
-  0%   { left:0px; top:0px;}
-  100%  {opacity: 0; left:200px; top:0px;}
-
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    left: 200px;
+    top: 0px;
+  }
 }
 @keyframes next {
-  0%   { right:0px; top:0px;}
-  100%  {opacity: 0; right:200px; top:0px;}
-  
+  0% {
+    right: 0px;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    right: 200px;
+    top: 0px;
+  }
 }
-.about_slide_logo_section{
+.about_slide_logo_section {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -472,41 +482,40 @@ label {
 
 /* about slide end */
 
-
 /* like slide */
 
-.like_section{
-  text-align: center
+.like_section {
+  text-align: center;
 }
-.like_title{
+.like_title {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 30px;
 }
-.like_slide{
+.like_slide {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
 }
-.like_slide_box{
+.like_slide_box {
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
 }
-.like_slide_boxes{
+.like_slide_boxes {
   display: flex;
   gap: 30px;
- width: 70%;
- overflow-x: scroll;
- margin-bottom: 150px;
+  width: 70%;
+  overflow-x: scroll;
+  margin-bottom: 150px;
 }
 
 .like_slide_boxes::-webkit-scrollbar {
   display: none;
 }
-.like_img_buttons{
+.like_img_buttons {
   font-size: 2rem;
   background-color: white;
   position: absolute;
@@ -517,20 +526,18 @@ label {
   display: none;
 }
 
-.like_slide_box:hover .like_img_buttons{
+.like_slide_box:hover .like_img_buttons {
   display: block;
   transition: 0.5s;
 }
-.like_img_buttons:hover{
-background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);
+.like_img_buttons:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
-
 
 /* news section start */
 
-
-.news_section{
+.news_section {
   width: 100%;
   height: 700px;
   background-color: rgb(241, 241, 241);
@@ -538,18 +545,18 @@ color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
 }
-.news_title{
+.news_title {
   font-size: 35px;
   font-weight: 500;
   padding: 20px 0;
 }
-.news_boxes{
+.news_boxes {
   display: flex;
   gap: 30px;
 }
-.news_box{
+.news_box {
   display: flex;
   align-items: start;
   flex-direction: column;
@@ -557,34 +564,116 @@ color: rgb(0, 0, 0);
   width: 450px;
   margin-bottom: 40px;
 }
-.news_box:hover .news_box_title{
+.news_box:hover .news_box_title {
   color: red;
   transition: 0.5s;
 }
-.news_box_title{
+.news_box_title {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-
 /* prosessing section start */
-.prosessing_section{
+.prosessing_section {
   display: flex;
   justify-content: center;
   gap: 100px;
- text-align: center;
- padding: 50px 0;
+  text-align: center;
+  padding: 50px 0;
 }
-.prosessing_box{
-  width: 300px;
-border-right: 1px solid rgba(128, 128, 128, 0.61);
+.prosessing_box {
+  padding-right: 90px;
+  border-right: 1px solid rgba(128, 128, 128, 0.61);
 }
-.prosessing_box_icon{
+.prosessing_box_title {
+  font-size: 1.3rem;
+  padding: 10px 0;
+}
+.prosessing_box_icon {
   font-size: 55px;
-  color: rgb(0, 0, 146);
+  color: rgb(74, 74, 148);
   padding: 20px 0;
 }
 
+/* futter */
+
+.futter {
+  width: 100%;
+  height: 650px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ftr_section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  padding: 50px 0;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.658);
+}
+.ftr_section1_left_title {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+.ftr_section1_right {
+  font-size: 1.8rem;
+  display: flex;
+  gap: 20px;
+  color: gray;
+}
+.ftr_input {
+  padding: 20px;
+  width: 400px;
+  margin-right: 20px;
+}
+.ftr_section1_center_btn {
+  padding: 21px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+.ftr_section2{
+  width: 68%;
+  height: 350px;
+  padding: 50px 0;
+  display: flex;
+  justify-content: start;
+  gap: 100px;
+  
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.658);
+
+}
+.ftr_section2_img{
+  width: 17%;
+  height: 50px;
+}
+.hearttt{
+  color: red;
+}
+.ftr_ul{
+  font-size: 1.3rem;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+._ftr_li{
+  font-size: 1.1rem;
+  list-style: none;
+  padding: 5px 0;
+  color: gray;
+ width: 60px;
+ overflow: hidden;
+}
+._ftr_li:hover{
+  border-bottom: 0.3px solid gray;
+
+}
+.ftr_section3_p{
+  margin-top: 80px;
+}
 
 /* Responsive start */
 @media only screen and (max-width: 900px) {
@@ -668,4 +757,28 @@ border-right: 1px solid rgba(128, 128, 128, 0.61);
       display: none;
     }
   }
+}
+
+
+
+
+/* contact page */
+
+.main_contact{
+  width: 100%;
+  background-color: antiquewhite;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 50px;
+}
+.main_map{
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+iframe{
+  width: 80%;
+  height: 88%;
+  margin: 30px 0;
 }

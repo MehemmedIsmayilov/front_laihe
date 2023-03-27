@@ -201,6 +201,36 @@ let like_filter = [
     price: 5,
     old_price: 85,
   },
+  {
+    img: "./images/latest5.jpg",
+    price: 98,
+    old_price: 130,
+  },
+  {
+    img: "./images/latest6.jpg",
+    price: 50,
+    old_price: 80,
+  },
+  {
+    img: "./images/latest7.jpg",
+    price: 70,
+    old_price: 90,
+  },
+  {
+    img: "./images/latest8.jpg",
+    price: 99.99,
+    old_price: 100,
+  },
+  {
+    img: "./images/latest6.jpg",
+    price: 250,
+    old_price: 251,
+  },
+  {
+    img: "./images/latest7.jpg",
+    price: 5,
+    old_price: 85,
+  },
 ];
 
 let like_slide_boxes = document.querySelector(".like_slide_boxes");
@@ -208,7 +238,7 @@ like_filter.forEach((item) => {
   like_slide_boxes.innerHTML += `
   <div class="like_slide_box">
   <div class="like_img">
-  <img src="${item.img}" alt="" />
+  <img src="${item.img}" alt="" class="js_img"/>
   <div class="like_img_buttons">
     <i class="like_icon fa-solid fa-cart-plus"></i>
     <i class="like_icon fa-solid fa-heart"></i>
@@ -220,12 +250,12 @@ like_filter.forEach((item) => {
 </div>`;
 });
 
+
+
 let like_slide_prew = document.querySelector(".like_slide_prew");
 let like_slide_next = document.querySelector(".like_slide_next");
 
-let index = like_filter.length-1;
-
-let restart = like_filter[0];
+let index = 0;
 like_slide_prew.addEventListener("click", () => {
   scroll -= 350;
   like_slide_boxes.scrollLeft = scroll;
@@ -233,10 +263,24 @@ like_slide_prew.addEventListener("click", () => {
 like_slide_next.addEventListener("click", () => {
   scroll += 350;
   like_slide_boxes.scrollLeft = scroll;
-  if ((like_filter.length = index)) {
-    restart;
+  if ((index==like_filter.length-1)) {
+    index=0;
   } else if ((like_filter.length = restart)) {
-    restart++;
+    index++;
+  }
+});
+
+
+
+
+let indexx = 0;
+
+like_slide_next.addEventListener("click", () => {
+  js_img.setAttribute("src", `./images/${like_filter[index]}`);
+  if (index == arr.length - 1) {
+    index = 0;
+  } else {
+    index++;
   }
 });
 
