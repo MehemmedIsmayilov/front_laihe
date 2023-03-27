@@ -414,7 +414,6 @@ label {
   width: 83%;
   padding: 10px;
   padding-left: 100px;
-  /* background-color: blue */
 }
 .filter_boxes {
   overflow-x: scroll;
@@ -446,22 +445,22 @@ label {
 }
 .about_slide_animationPrew{
   animation-name: prew;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   position: relative;
 }
 .about_slide_animationNext{
   animation-name: next;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
   position: relative;
 }
 @keyframes prew {
   0%   { left:0px; top:0px;}
-  100%  {opacity: 0; left:100px; top:0px;}
+  100%  {opacity: 0; left:200px; top:0px;}
 
 }
 @keyframes next {
   0%   { right:0px; top:0px;}
-  100%  {opacity: 0; right:100px; top:0px;}
+  100%  {opacity: 0; right:200px; top:0px;}
   
 }
 .about_slide_logo_section{
@@ -474,19 +473,117 @@ label {
 /* about slide end */
 
 
+/* like slide */
+
+.like_section{
+  text-align: center
+}
+.like_title{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.like_slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.like_slide_box{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.like_slide_boxes{
+  display: flex;
+  gap: 30px;
+ width: 70%;
+ overflow-x: scroll;
+ margin-bottom: 150px;
+}
+
+.like_slide_boxes::-webkit-scrollbar {
+  display: none;
+}
+.like_img_buttons{
+  font-size: 2rem;
+  background-color: white;
+  position: absolute;
+  left: 90px;
+  bottom: 100px;
+  padding: 10px 20px;
+  z-index: 3;
+  display: none;
+}
+
+.like_slide_box:hover .like_img_buttons{
+  display: block;
+  transition: 0.5s;
+}
+.like_img_buttons:hover{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+}
 
 
+/* news section start */
 
 
+.news_section{
+  width: 100%;
+  height: 700px;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px
+}
+.news_title{
+  font-size: 35px;
+  font-weight: 500;
+  padding: 20px 0;
+}
+.news_boxes{
+  display: flex;
+  gap: 30px;
+}
+.news_box{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  width: 450px;
+  margin-bottom: 40px;
+}
+.news_box:hover .news_box_title{
+  color: red;
+  transition: 0.5s;
+}
+.news_box_title{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 
 
-
-
-
-
-
-
-
+/* prosessing section start */
+.prosessing_section{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+ text-align: center;
+ padding: 50px 0;
+}
+.prosessing_box{
+  width: 300px;
+border-right: 1px solid rgba(128, 128, 128, 0.61);
+}
+.prosessing_box_icon{
+  font-size: 55px;
+  color: rgb(0, 0, 146);
+  padding: 20px 0;
+}
 
 
 /* Responsive start */
