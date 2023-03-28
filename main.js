@@ -117,15 +117,53 @@ let products = [
     category: "baby",
   },
 ];
+
+
 products.forEach((product) => {
   let boxes = document.querySelector(".filter_boxes");
-  boxes.innerHTML += `   
+  boxes.innerHTML += `
   <div class="filter_box">
+  <p class="category-filter">${product.category}</p>
     <img src="${product.pic}" alt="">
     <p class="about_filterBox">${product.name}</p>
     <p class="price_filterBox">$${product.price} <del>$${product.oldPrice}</del></p>
+    <button class="basket">Add To Basket</button>
+
   </div>`;
 });
+
+let filterBoxes = document.querySelectorAll(".filter_box");
+let filterButtons = document.querySelectorAll(".filter_btn");
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    filterBoxes.forEach((box) => {
+      let category = box.children[0];
+
+      if (
+        category.innerHTML.toUpperCase() != button.dataset.filter.toUpperCase()
+      ) {
+        category.parentElement.style.display = "none";
+        // category=null;
+        // console.log(box)
+      }
+      if (
+        category.innerHTML.toUpperCase() == button.dataset.filter.toUpperCase()
+      ) {
+        category.parentElement.style.display = "block";
+      }
+      if (button.dataset.filter == "all") {
+        category.parentElement.style.display = "block";
+      }
+    });
+  });
+});
+// basket.addEventListener("click", () => {
+//   const header_addToCart=document.querySelector(".header_addToCart")
+//   let count = 0;
+//   const sebet = document.querySelector(".sebet");
+//   count++;
+//   header_addToCart.innerHTML += `<sup>${count}1</sup>`;
+// });
 
 let scroll = 0;
 $(".filter_btn_next").click(() => {
@@ -137,6 +175,12 @@ $(".filter_btn_prew").click(() => {
   $(".filter_boxes").scrollLeft(scroll);
 });
 
+const men = document.querySelector(".men");
+// let exam=men.addEventListener("click",()=>{
+//   products.category="men";
+
+// })
+// console.log({exam})
 //filter slide end
 
 // search section start
@@ -250,8 +294,6 @@ like_filter.forEach((item) => {
 </div>`;
 });
 
-
-
 let like_slide_prew = document.querySelector(".like_slide_prew");
 let like_slide_next = document.querySelector(".like_slide_next");
 
@@ -263,15 +305,12 @@ like_slide_prew.addEventListener("click", () => {
 like_slide_next.addEventListener("click", () => {
   scroll += 350;
   like_slide_boxes.scrollLeft = scroll;
-  if ((index==like_filter.length-1)) {
-    index=0;
+  if (index == like_filter.length - 1) {
+    index = 0;
   } else if ((like_filter.length = restart)) {
     index++;
   }
 });
-
-
-
 
 let indexx = 0;
 
@@ -284,15 +323,28 @@ like_slide_next.addEventListener("click", () => {
   }
 });
 
-// $(".like_slide_next").click(()=>{
-//   scroll+=350;
-//   $(".like_slide_boxes").scrollLeft(scroll)
-// });
-//  $(".filter_btn_next").click(() => {
-//   scroll += 1400;
-//   $(".filter_boxes").scrollLeft(scroll);
-// });
-// $(".filter_btn_prew").click(() => {
-//   scroll -= 1400;
-//   $(".filter_boxes").scrollLeft(scroll);
-// });
+// up buttons
+let up = document.querySelector(".up");
+let body = document.querySelector("body");
+let scrollup = 0;
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    up.style.display = "block";
+  } else {
+    up.style.display = "none";
+  }
+}
+up.addEventListener("click", function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+
+
+
+
